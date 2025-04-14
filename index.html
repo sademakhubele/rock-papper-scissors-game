@@ -12,25 +12,23 @@
     <h2>Rock - Paper - Scissors</h2>
 
     <div class="game">
-    <div class="choices">
-        <button onclick="playGame('rock', this)">👊🏽</button>
-        <button onclick="playGame('paper', this)">✋🏽</button>
-        <button onclick="playGame('scissors', this)">✌🏽</button>
-    </div>
-    
-    <div id="playerDisplay">PLAYER</div>
-    <div id="computerDisplay">COMPUTER</div>
-    <div id="resultDisplay"></div>
+        <div class="choices">
+            <button id="rockBtn" aria-label="Rock">👊🏽</button>
+            <button id="paperBtn" aria-label="Paper">✋🏽</button>
+            <button id="scissorsBtn" aria-label="Scissors">✌🏽</button>
+        </div>
 
-    <div class="scoreDisplay">Player Score:
-        <span id="playerScoreDisplay">0</span>
-    </div>
+        <div id="playerDisplay">PLAYER:</div>
+        <div id="computerDisplay">COMPUTER:</div>
+        <div id="resultDisplay">RESULT</div>
 
-    <div class="scoreDisplay">Computer Score:
-        <span id="computerScoreDisplay">0</span>
+        <div class="scoreboard">
+            <div class="scoreDisplay">Player Score: <span id="playerScoreDisplay">0</span></div>
+            <div class="scoreDisplay">Computer Score: <span id="computerScoreDisplay">0</span></div>
+        </div>
+
+        <button id="resetButton">Reset Game</button>
     </div>
-    <button id="resetButton" onclick="resetGame()">Reset Game</button>
-</div>
 </div>
 
     <script src="index.js"></script>
