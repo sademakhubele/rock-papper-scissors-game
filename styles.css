@@ -139,15 +139,15 @@ h2 {
     }
 
     #resultDisplay {
-        font-size: 2rem;
-    }
-
-    #playerDisplay, #computerDisplay {
         font-size: 1.5rem;
     }
 
-    .scoreDisplay {
+    #playerDisplay, #computerDisplay {
         font-size: 1rem;
+    }
+
+    .scoreDisplay {
+        font-size: 1.5rem;
     }
 
     .scores {
