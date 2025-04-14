@@ -40,8 +40,8 @@ function playGame(playerChoice, button) {
         }
     }
 
-    playerDisplay.textContent = PLAYER: ${playerChoice.toUpperCase()};
-    computerDisplay.textContent = COMPUTER: ${computerChoice.toUpperCase()};
+    playerDisplay.textContent = `PLAYER: ${playerChoice.toUpperCase()}`;
+    computerDisplay.textContent = `COMPUTER: ${computerChoice.toUpperCase()}`;
     resultDisplay.textContent = result;
 
     resultDisplay.classList.remove("greenText", "redText");
@@ -60,7 +60,7 @@ function playGame(playerChoice, button) {
     }
 
     button.classList.remove("bounce");
-    void button.offsetWidth; // Reflow to restart animation
+    void button.offsetWidth;
     button.classList.add("bounce");
 
     resultDisplay.classList.remove("animate");
