@@ -1,0 +1,152 @@
+body{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3.5rem;
+    color: hsl(0, 0%, 20%);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #222121;
+    text-align: center;
+}
+
+.game {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.choices{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.choices button{
+    font-size: 7.5rem;
+    min-width: 160px;
+    margin: 0 10px;
+    border-radius: 250px;
+    background-color: palevioletred;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.choices button:hover{
+    background-color: plum;
+}
+
+.game-container {
+    background-color: #fff;
+    border: 5px solid palevioletred;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90vw;
+    max-width: 850px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+
+
+.greenText, #playerScoreDisplay {
+   color: rgb(18, 112, 18);
+}
+
+.redText, #computerScoreDisplay {
+    color: rgb(172, 54, 54);
+}
+
+.scoreDisplay {
+    font-size: 2rem;
+}
+
+#playerDisplay, #computerDisplay {
+    font-size: 2.5rem;
+}
+
+#resultDisplay {
+    font-size: 5rem;
+    margin: 30px 0;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resetButton:hover {
+    background-color: #666;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#resultDisplay.animate {
+    animation: fadeIn 0.5s ease;
+    animation-fill-mode: both;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.2); }
+    50%  { transform: scale(0.95); }
+    70%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.bounce {
+    animation: bounce 0.4s ease;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .choices button {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
+    }
+
+    #resultDisplay {
+        font-size: 2.5rem;
+    }
+
+    #playerDisplay, #computerDisplay {
+        font-size: 1.5rem;
+    }
+
+    .scores {
+        font-size: 1.2rem;
+    }
+}
