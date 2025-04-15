@@ -13,9 +13,9 @@
 
     <div class="game">
     <div class="choices">
-        <button onclick="playGame('rock', this)">👊🏽</button>
-        <button onclick="playGame('paper', this)">✋🏽</button>
-        <button onclick="playGame('scissors', this)">✌🏽</button>
+        <button id="rockBtn" onclick="playGame('rock', this)">👊🏽</button>
+        <button id="paperBtn" onclick="playGame('paper', this)">✋🏽</button>
+        <button id="scissorsBtn" onclick="playGame('scissors', this)">✌🏽</button>
     </div>
     
     <div id="playerDisplay">PLAYER</div>
@@ -29,7 +29,9 @@
     <div class="scoreDisplay">Computer Score:
         <span id="computerScoreDisplay">0</span>
     </div>
-    <button id="resetButton" onclick="resetGame()">Reset Game</button>
+    <div class="button-row">
+        <button id="resetButton" onclick="resetRound()">Reset Round</button>
+        <button id="restartButton" onclick="restartGame()">Restart Game</button>
 </div>
 </div>
 
