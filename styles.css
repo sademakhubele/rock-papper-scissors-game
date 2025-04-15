@@ -46,11 +46,17 @@ h2 {
     background-color: plum;
 }
 
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .game-container {
     background-color: rgb(221, 178, 193);
     border: 5px solid palevioletred;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 20px;
+    padding: 10px;
     width: 90vw;
     max-width: 850px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
@@ -84,20 +90,20 @@ h2 {
     margin: 30px 0;
 }
 
-#resetButton {
-    margin-top: 20px;
+#resetButton, #restartButton {
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
     border-radius: 10px;
-    background-color: #444;
+    background-color: #471a29;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#resetButton:hover {
+#resetButton:hover, #restartButton:hover {
     background-color: #666;
 }
 
@@ -123,6 +129,19 @@ h2 {
     animation: bounce 0.4s ease;
 }
 
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
@@ -140,7 +159,6 @@ h2 {
 
     #resultDisplay {
         font-size: 1rem;
-        margin-bottom: 5px;
     }
 
     #playerDisplay, #computerDisplay {
@@ -148,11 +166,11 @@ h2 {
     }
 
     .scoreDisplay {
-        font-size: 1.5rem;
+        font-size: 0.8rem;
     }
 
     .scores {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .game-container {
@@ -161,5 +179,10 @@ h2 {
 
     .game {
         max-height: 650px;
+    }
+
+    #resetButton,
+    #restartButton {
+        width: 100%;
     }
 }
