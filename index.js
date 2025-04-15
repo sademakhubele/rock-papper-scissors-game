@@ -4,20 +4,36 @@ const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+
+const buttons = {
+    rock: document.getElementById("rockBtn"),
+    paper: document.getElementById("paperBtn"),
+    scissors: document.getElementById("scissorsBtn")
+};
+
 let playerScore = 0;
 let computerScore = 0;
 
-function resetGame() {
-    playerScore = 0;
-    computerScore = 0;
-    playerScoreDisplay.textContent = playerScore;
-    computerScoreDisplay.textContent = computerScore;
-
+function resetRound() {
     playerDisplay.textContent = "PLAYER:";
     computerDisplay.textContent = "COMPUTER:";
     resultDisplay.textContent = "RESULT";
 
     resultDisplay.classList.remove("greenText", "redText", "animate");
+
+    for (let btn in buttons) {
+        buttons[btn].classList.remove("fade-out");
+        buttons[btn].classList.add("fade-in");
+    }
+}
+
+function restartGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+
+    resetRound();
 }
 
 function playGame(playerChoice, button) {
@@ -66,4 +82,15 @@ function playGame(playerChoice, button) {
     resultDisplay.classList.remove("animate");
     void resultDisplay.offsetWidth; 
     resultDisplay.classList.add("animate");
+
+    for (let choice in buttons) {
+        const btn = buttons[choice];
+        if (choice !== playerChoice && choice !== computerChoice) {
+            btn.classList.remove("fade-in");
+            btn.classList.add("fade-out");
+        } else {
+            btn.classList.remove("fade-out");
+            btn.classList.add("fade-in");
+        }
+    }
 } 
